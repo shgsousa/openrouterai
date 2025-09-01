@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: openrouterai-service
+  namespace: mcp-servers
+spec:
+  selector:
+    app: openrouterai
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: ClusterIP

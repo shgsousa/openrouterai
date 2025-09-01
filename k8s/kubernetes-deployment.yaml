@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openrouterai-deployment
+  namespace: mcp-servers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openrouterai
+  template:
+    metadata:
+      labels:
+        app: openrouterai
+    spec:
+      containers:
+      - name: openrouterai
+        image: shgsousa/openrouterai:latest
+        ports:
+        - containerPort: 8000
