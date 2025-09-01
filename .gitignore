@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+# uv specific
+uv.lock
+uv.log
